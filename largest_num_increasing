@@ -1,0 +1,60 @@
+import java.util.Scanner;
+//import java.util.Scanner.*;
+public class largest_num_n_increases {
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int k=sc.nextInt();
+		String s=new String();
+		s=s+num;
+		//System.out.print(s.substring(0,1));
+		int h=Integer.parseInt(s.substring(0,1));
+		int t=Integer.parseInt(s.substring(1,2));
+		int o=Integer.parseInt(s.substring(2,3));
+		System.out.println(h+" "+t+" "+o);
+		//System.out.println(k);
+		for(int i=h+1;i<10;i++)
+		{
+			
+			if(k>0)
+			{
+				h=i;
+				k--;
+			}
+			else
+				break;
+			
+		}
+		//System.out.println(k);
+		for(int i=t+1;i<10;i++)
+		{
+			
+			if(k>0)
+			{
+				t=i;
+				k--;
+			}
+			else
+				break;
+		}
+		//System.out.println(k);
+		for(int i=o+1;i<10;i++)
+		{
+			
+			if(k>0)
+			{
+				o=i;
+				k--;
+			}
+			else
+				break;
+		}
+		//System.out.println(k);
+		//System.out.println();
+		//System.out.println(h+""+t+""+o);
+		//for()
+		System.out.println("The number is :"+(h*100+t*10+0));
+		
+	}
+}
